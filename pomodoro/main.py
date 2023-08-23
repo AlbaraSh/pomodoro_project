@@ -12,8 +12,7 @@ FONT = (FONT_NAME, 35, "bold")
 reps = 0
 timer = None
 
-
-# reset_timer method reset the timer and the reps and sets the label nad canvas back to their original text
+# reset_timer method reset the timer and the reps and sets the label and canvas back to their original text
 def reset_timer():
     window.after_cancel(timer)
     canvas.itemconfig(timer_text, text="00:00")
@@ -21,7 +20,6 @@ def reset_timer():
     check_marks.config(text="")
     global reps
     reps = 0
-
 
 # start_timer method converts the minutes to seconds and determines what phase is next once the clock hits 0
 def start_timer():
@@ -40,7 +38,6 @@ def start_timer():
     else:
         count_down(work_sec)
         label.config(text="Work Time", fg=GREEN)
-
 
 # count_down method is the countdown mechanism that is used in start_timer(),
 # this also prints a checkmark for each work rep that is completed
